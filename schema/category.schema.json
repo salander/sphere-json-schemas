@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "SPHERE.IO category schema",
+  "url": "http://dev.sphere.io/http-api-projects-categories.html",
   "type": "object",
   "properties": {
     "total": {
