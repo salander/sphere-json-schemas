@@ -3,11 +3,11 @@ var Validator = require('jsonschema').Validator;
 var val = new Validator();
 var currentDir = __dirname;
 
-var ltextFileName = currentDir + '/schema/parts/ltext.json';
+var ltextFileName = currentDir + '/schema/types/ltext.json';
 var ltext = require('' + ltextFileName);
 val.addSchema(ltext)
 
-var referenceFileName = currentDir + '/schema/parts/reference.json';
+var referenceFileName = currentDir + '/schema/types/reference.json';
 var reference = require('' + referenceFileName);
 val.addSchema(reference)
 
