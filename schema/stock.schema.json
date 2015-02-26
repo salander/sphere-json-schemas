@@ -5,7 +5,7 @@
     "total": {
       "type": "integer"
     },
-    "inventory": {
+    "stocks": {
       "type": "array",
       "items": {
         "type": "object",
@@ -33,5 +33,6 @@
       }
     }
   },
-  "required": ["inventory"]
+  "additionalProperties": false,
+  "required": ["stocks"]
 }
