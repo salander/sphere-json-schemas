@@ -1,0 +1,11 @@
+{
+  "prices": [
+    {
+      "sku": "123",
+      "money": {
+        "centAmount": 999,
+        "currencyCode": "EUR"
+      }
+    }
+  ]
+}

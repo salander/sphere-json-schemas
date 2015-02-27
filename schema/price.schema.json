@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "SPHERE.IO price schema",
+  "url": "http://dev.sphere.io/http-api-projects-products.html#product-price",
+  "type": "object",
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "prices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sku": {
+            "type": "string"
+          },
+          "money": {
+            "type": "object",
+            "properties": {
+              "centAmount": {
+                "type": "integer"
+              },
+              "currencyCode": {
+                "type": "string",
+                "pattern": "[A-Z]{3}"
+              }
+            },
+            "required": ["centAmount", "currencyCode"]
+          }
+        },
+        "required": ["sku", "money"]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["prices"]
+}
