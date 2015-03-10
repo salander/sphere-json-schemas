@@ -31,5 +31,14 @@ We are providing those JSON schemas in order to use stream processing while talk
 ### Minimum required values vs API requirements
 
 Some proprties defined in the JSON schema are optional whereas the same property in the API is required. One example is the `slug` of categories. If the `slug` isn't provided the importer will generate a slug using a `slugify` method while ensuring that all slugs will be unique.
-
 On the other hand, the `sku` of variants is required in the JSON schema. The `sku` is a crutial identifier to link a variant to its inventory as well as pricing information.
+
+### Referencing
+
+In the first version we will suppor the following reference resolving mechanism for the different types.
+
+- channel: key
+- category: external id
+- product type: name
+- tax category: name
+- customer group: name
