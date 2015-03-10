@@ -39,6 +39,6 @@ In the first version we will suppor the following reference resolving mechanism 
 
 - channel: key
 - category: external id
-- product type: name
-- tax category: name
-- customer group: name
+- product-type: name
+- tax-category: name
+- customer-group: name
