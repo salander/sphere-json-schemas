@@ -5,9 +5,21 @@
       "name": {
         "en": "My Product"
       },
-      "variants": [
+      "masterVariant":
         {
           "id": 1,
+          "sku": "123",
+          "attributes": [
+            {
+              "name": "bar",
+              "value": "foo"
+            }
+          ],
+          "images": []
+        },
+      "variants": [
+        {
+          "id": 2,
           "sku": "123",
           "attributes": [
             {

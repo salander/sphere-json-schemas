@@ -4,9 +4,8 @@
       "name": {
         "en": "My Product"
       },
-      "variants": [
-        { "sku": "123" }
-      ]
+      "masterVariant":
+      { "sku": "123" }
     }
   ]
 }
