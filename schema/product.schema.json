@@ -1,7 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "SPHERE.IO product schema",
-  "url": "http://dev.sphere.io/http-api-projects-products.html",
   "type": "object",
   "properties": {
     "total": {
@@ -27,15 +25,54 @@
           "description": {
             "$ref": "/ltext"
           },
+          "masterVariant": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 1
+              },
+              "sku": {
+                "type": "string"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["url"]
+                }
+              },
+              "attributes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "value": { }
+                  },
+                  "additionalProperties": false,
+                  "required": ["name"]
+                }
+              }
+            },
+            "required": ["sku"]
+          },
           "variants": {
             "type": "array",
-            "minItems": 1,
             "items": {
               "type": "object",
               "properties": {
                 "id": {
                   "type": "integer",
-                  "minimum": 1
+                  "minimum": 2
                 },
                 "sku": {
                   "type": "string"
@@ -80,10 +117,9 @@
             "$ref": "/reference"
           }
         },
-        "required": ["name", "variants"]
+        "required": ["name", "masterVariant"]
       }
     }
   },
-  "additionalProperties": false,
   "required": ["products"]
 }
