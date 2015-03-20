@@ -1,5 +1,7 @@
 {
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "SPHERE.IO product schema",
+  "url": "ttp://dev.sphere.io/http-api-projects-products.html",
   "type": "object",
   "properties": {
     "total": {
@@ -121,5 +123,6 @@
       }
     }
   },
+  "additionalProperties": false,
   "required": ["products"]
 }
