@@ -20,7 +20,7 @@
       "variants": [
         {
           "id": 2,
-          "sku": "123",
+          "sku": "456",
           "attributes": [
             {
               "name": "bar",
